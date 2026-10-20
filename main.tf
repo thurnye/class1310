@@ -107,6 +107,7 @@ resource "aws_instance" "private_instance" {
 
   tags = {
     Name = "test-private-instance"
+    Dept = "Dev-test"
   }
 }
     
