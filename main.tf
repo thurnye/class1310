@@ -93,7 +93,7 @@ resource "aws_instance" "public_instance" {
   ami           = "ami-0b6d9d3d33ba97d99"
   instance_type = "t3.micro"
   associate_public_ip_address = true
-  key_name      = "newkey"
+  key_name      = "class2026"
 
   tags = {
     Name = "test-public-instance"
