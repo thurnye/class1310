@@ -6,6 +6,7 @@ resource "aws_vpc" "main" {
 
   tags = {
     Name = "test-vpc"
+    Dept = "Dev-test"
   }
 }
 
@@ -15,6 +16,7 @@ resource "aws_subnet" "public" {
 
   tags = {
     Name = "test-public-subnet"
+    Dept = "Dev-test"
   }
 }
 
@@ -24,6 +26,7 @@ resource "aws_subnet" "private" {
 
   tags = {
     Name = "test-private-subnet"
+    Dept = "Dev-test"
   }
 }
 
@@ -32,6 +35,7 @@ resource "aws_internet_gateway" "gw" {
 
   tags = {
     Name = "my-igw"
+    Dept = "Dev-test"
   }
 }
 
@@ -44,6 +48,7 @@ resource "aws_route_table" "public" {
 
   tags = {
     Name = "test-public-route-table"
+    Dept = "Dev-test"
   }
 }
 
@@ -57,6 +62,7 @@ resource "aws_eip" "nat" {
   depends_on                = [aws_internet_gateway.gw]
   tags = {
     Name = "my-nat-eip"
+    Dept = "Dev-test"
   }
 }
 
@@ -66,6 +72,7 @@ resource "aws_nat_gateway" "example" {
 
   tags = {
     Name = "gw-nat"
+    Dept = "Dev-test"
   }
 
   depends_on = [aws_internet_gateway.gw]
@@ -80,6 +87,7 @@ resource "aws_route_table" "private" {
 
   tags = {
     Name = "test-private-route-table"
+    Dept = "Dev-test"
   }
 }
 
@@ -97,6 +105,7 @@ resource "aws_instance" "public_instance" {
 
   tags = {
     Name = "test-public-instance"
+    Dept = "Dev-test"
   }
 }
 resource "aws_instance" "private_instance" {
