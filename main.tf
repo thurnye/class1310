@@ -103,7 +103,7 @@ resource "aws_instance" "private_instance" {
   subnet_id = aws_subnet.private.id  
   ami           = "ami-0b6d9d3d33ba97d99"
   instance_type = "t3.micro"
-  key_name      = "newkey"
+  key_name      = "class2026"
 
   tags = {
     Name = "test-private-instance"
