@@ -99,9 +99,9 @@ resource "aws_route_table_association" "private" {
 resource "aws_instance" "public_instance" {
   subnet_id = aws_subnet.public.id  
   ami           = "ami-0b6d9d3d33ba97d99"
-  instance_type = "t2.micro"
-  associate_public_ip_address = true
+  instance_type = "t3.micro"
   key_name      = "class2026"
+  associate_public_ip_address = true
 
   tags = {
     Name = "test-public-instance"
@@ -111,7 +111,7 @@ resource "aws_instance" "public_instance" {
 resource "aws_instance" "private_instance" {
   subnet_id = aws_subnet.private.id  
   ami           = "ami-0b6d9d3d33ba97d99"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   key_name      = "class2026"
 
   tags = {
